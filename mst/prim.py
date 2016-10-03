@@ -1,3 +1,6 @@
+# Bring idea from http://blog.csdn.net/littlethunder/article/details/9748361
+
+
 def prim(graph, n):
     connection, dist = [0] * n, graph[0]
     visited = [True] + [False]*(n-1)
@@ -18,19 +21,18 @@ def prim(graph, n):
                 dist[i] = graph[j][i]
                 connection[i] = j
 
-    return connection, dist
+    return dist, connection
 
 
 if __name__ == '__main__':
     _ = None
     graph = [
-            [0, 6, 3, _, _, _, _],
-            [6, 0, 2, 5, _, _, _],
-            [3, 2, 0, 3, 4, _, _],
-            [_, 5, 3, 0, 2, 3, _],
-            [_, _, 4, 2, 0, 5, _],
-            [_, _, _, 3, 5, 0, _],
-            [_, _, _, _, _, _, 0],
+            [0, 6, 3, _, _, _],
+            [6, 0, 2, 5, _, _],
+            [3, 2, 0, 3, 4, _],
+            [_, 5, 3, 0, 2, 3],
+            [_, _, 4, 2, 0, 5],
+            [_, _, _, 3, 5, 0],
             ]
     dis, pre = prim(graph, len(graph))
     print(dis)
