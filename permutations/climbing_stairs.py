@@ -22,6 +22,8 @@ class Solution:
     """
     Runtime: 28 ms, faster than 83.88% of Python3 online submissions for Climbing Stairs.
     Memory Usage: 13.9 MB, less than 98.13% of Python3 online submissions for Climbing Stairs.
+    
+    f(n) = f(n-1) + f(n-2)
     """
     def climbStairs(self, n: int) -> int:
         if n <= 2:
